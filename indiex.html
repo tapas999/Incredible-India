@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredibl India</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="#"> Incredibl India</a></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destination">Destination</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#plan-your-trip">Plan Your Trip</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Discover the Heat of India</h2>
+                <p>From ancient wornders to vibrant cultures, embark on an unforgettable journey.</p>
+                <a href="#destination" class="btn" >Explore
+                    Destination
+                </a>
+            </div>
+        </section>
+        <section id="destination" class="destinations-section-padding">
+            <div class="container">
+                <h2>Popular Destination</h2>
+                <div class="destinatin-grid" id="destinationGrid">
+                    <div class="destination-card">
+                        <img src="photos/taj.png " alt="taj mahal">
+                        <h3>Agra-Taj Mahal</h3>
+                        <p>A symbol of etemal loce, this magnificent marble masuoleum is a UNESCO World Heritage site.</p>
+                        <button class="read-more-btn" data-destination="agra">Read More</button>
+                        
+
+                    </div>
+                    <div class="destination-card">
+                        <img src="photos/jaipur.png" alt="Jaipur">
+                        <H3>Jaipur - The Pink City</H3>
+                        <p>Explore majestic forts, royal palaces. and vibrant bazaars</p>
+                        <button class="read-more-btn" data-destination="jaipur">Read More</button>
+
+                    </div>
+                    <div class="destination-card">
+                        <img src="photos/keral.png" alt="Kerala Backwaters">
+                        <h3>Kerala - God's Own Country</h3>
+                        <p>Cruise through serene backwaters, relax on pristine beaches, and exprience Ayurvedic treatments.</p>
+                        <button class="read-more-btn" data-destination="Kerala">Read More</button>
+
+                    </div>
+                    <div class="destination-card">
+                        <img src="photos/goa.png" alt="Goa">
+                        <h3>Goa - Beaches & Culture</h3>
+                        <p>Enjoy sun-kissed beaches, vibrant nightlife, and a unique blend of Indian and Portguese Culture.</p>
+                        <button class="read-more-btn" data-destination="Goa">Read More</button>
+                    </div>
+                    <div class="destination-card">
+                        <img src="photos/wb.png" alt="West Bengal">
+                        <h3>West Bengal- The sweetest Part of India.</h3>
+                        <p>Explore Himalyan peaksto the Royal Bengal Tiger's domain Sundarbans,all infused with a rich cultural Heritage cetntered around Kolkata.</p>
+                        <button class="read-more-btn" data-destination="West Bengal">Read More</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="expriences" class="expriences section-padding bg-light">
+            <div class="container">
+                <h2>Unique Indian Experiences</h2>
+                <div class="exprience-gird">
+                    <div class="exprinece-item">
+                        <i class="fas fa-mountain fa-3x"></i>
+                        <h3>Adventure & Trakking</h3>
+                        <p>Scale the Himalayas raft down gushing rivers, and explore wildlife sanctuaries.</p>
+
+                    </div>
+                     <div class="exprinece-item">
+                        <i class="fas fa-spa fa-3x"></i>
+                        <h3>Wellness & Ayrveda</h3>
+                        <p>Rejuvenate your mind and body with traditional Ayurvedic therapies and yoga retreats.</p>
+
+                    </div>
+                     <div class="exprinece-item">
+                        <i class="fas fa-palette fa-3x"></i>
+                        <h3>Art & Culture</h3>
+                        <p>Immerse yourself in India's rich heritage of classical dance , music, and exquisite craftsmanship.</p>
+                        
+                    </div>
+                     <div class="exprinece-item">
+                        <i class="fas fa-utensils fa-3x"></i>
+                        <h3>Culinary Journeys</h3>
+                        <p>Savor diverse flavors, from street food delights to royal thalis , across different regions.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="plan-your-trip" class="plan-trip section-padding">
+            <div class="container">
+                <h2>Plan your perfect Trip</h2>
+                <form class="trip-form">
+                    <div class="form-group">
+                        <label for="destinatin-selet">Preferred Destination:</label>
+                        <select  id="destination-select">
+                            <option value="">Any</option>
+                            
+                            <option value="agra">Agra</option>
+                            
+                            <option value="jaipur">Jaipur</option>
+                            <option value="kerala">Kerala</option>
+                            <option value="goa">Goa</option>
+                            
+                            <option value="west bengal">West Bengal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="travel-dates">Travel Dates</label>
+                        <input type="date" id="travel-dates">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="num-travelers">Number of Travelers</label>
+                        <input id="num-travelers" type="number" min="1" value="1">
+
+
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get a Quote</button>
+                
+                </form>
+            </div>
+        </section>
+        <section id="contact" class="contact section-padding bg-light">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have qustions or need assistance? Reach out to us!</p>
+                <p><i class="fas fa-envelope"></i>info@Incrediblindia.com</p>
+                <p><i class="fas fa-phone"></i>+91704744434</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Incredibl India Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+/*basic reset & body style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    
+
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.section-padding{
+    padding: 80px 0;
+}
+
+.bg-light{
+    background-color: #f9f9f9;
+}
+
+/*Header & Navigation*/
+
+header{
+    background-color: #004d40;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.logo a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-links li{
+    margin-left: 30px;
+
+}
+
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: #ffb300/*amber*/;
+}
+
+/*burger menu(for responsiveness)*/
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px ;
+    transition: all 0.3s ease;
+
+
+}
+
+/*hero section*/
+.hero{
+    background:
+    url('https://via.placeholder.com/1500x800/66BB6A/FFFFFF?text=Incredible+India+Hero')no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+
+.hero::before{
+content: '';
+position:absolute;
+top:0;
+left: 0;
+width: 100;
+height: 100;
+background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.hero-content{
+    z-index: 1;
+    max-width: 800px;
+    
+}
+
+.hero-content h2{
+    font-size: 3.rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.hero-content p{
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #00695c;
+}
+.btn{
+    display: inline-block;
+    background-color: #ffb300;
+    color: #004d40;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition:background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #ffc107;
+
+}
+.btn-primary{
+    background-color: #004d40;
+    color: #fff;
+}
+
+
+.btn-primary:hover{
+    background-color: #00695c;
+}
+/*section Headings*/
+
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #004d40;
+
+}
+
+/*destination section*/
+.destination-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 30px;
+}
+
+.destination-card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+
+}
+
+.destination-card:hover{
+    transform: translateY(-5px);
+}
+
+.destination-card img{
+    width: 600px;
+    height: 200px;
+    object-fit: cover;
+
+    
+        width: 100%;
+        height: 100%;
+        object-fit: fill; /* Use 'cover' or 'contain' for different effects */
+      }
+
+.destination-card h3{
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    color: #004d40;
+}
+
+.destination-card p{
+    padding: 0 20px 20px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.destination-card .read-more-btn{
+    display: block;
+    width: calc(100% -40px);/*adjust padding*/
+    margin: 0 20px 20px;
+    padding: 10px;
+    background-color: #ffb300;
+    color: #004d40;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.destination-card .read-more-btn:hover{
+    background-color: #ffc107;
+}
+
+/*experiences section*/
+
+.exprience-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.exprience-item{
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.exprience-item i{
+    color: #ffb300;
+    margin-bottom: 20px;
+}
+.exprience-item h3{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #004d40;
+}
+
+.exprience-item p{
+    color: #555;
+}
+
+/*plan your trip form*/
+.trip-form{
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #004d40;
+}
+
+.form-group input,
+.form-group select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.trip-form .btn{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+/*contact section*/
+.contact p{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.contact p i{
+    margin-right: 10px;
+    color: #004d40;
+
+}
+
+.social-icons{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a{
+    color: #004d40;
+    font-size: 1.8em;
+    margin: 0 15px;
+    transition: color 0 3s ease;
+}
+
+.social-icons a:hover{
+    color: #ffb300;
+}
+
+/*footer*/
+footer{
+    background-color: #00332e;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size:0.9em;
+}
+
+/*responsive Design*/
+@media(max-width:768px){
+    .nav-links{
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background-color: #004d40;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 100px;
+        z-index: 999;
+    }
+
+    .nav-links li{
+        margin: 25px 0;
+
+    }
+    .burger{
+        display: block;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+    .toggle.line2{
+        opacity: 0;
+    }
+    .toggle.line3{
+    transform: rotate(45deg) translate(-5px, -6px);    
+    }
+    .hero-content p{
+        font-size: 1.1em;
+    }
+    .destination-grid .exprience-grid{
+        grid-template-columns: 1fr;
+    }
+    
+}
