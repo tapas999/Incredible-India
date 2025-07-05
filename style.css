@@ -31,14 +31,17 @@ body{
 /*Header & Navigation*/
 
 header{
-    background-color: #004d40;
+    background: rgba(13, 30, 64, 0.55); /* semi-transparent navy blue */
     color: #fff;
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
+    box-shadow: 0 2px 12px rgba(13, 30, 64, 0.18);
+    backdrop-filter: blur(8px); /* glass effect */
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
 
 header .container{
     display: flex;
@@ -95,9 +98,9 @@ header .container{
 }
 
 /*hero section*/
-.hero{
+.hero, #home {
     background:
-    url('https://via.placeholder.com/1500x800/66BB6A/FFFFFF?text=Incredible+India+Hero')no-repeat center center/cover;
+        url('ChatGPT Image Jul 5, 2025, 11_24_36 PM.png') no-repeat center center/cover;
     height: 600px;
     display: flex;
     justify-content: center;
@@ -105,22 +108,29 @@ header .container{
     text-align: center;
     color: #fff;
     position: relative;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10); /* less shadow */
+    backdrop-filter: blur(4px); /* less blur */
+    -webkit-backdrop-filter: blur(4px);
+    /* border-radius: 24px; */
+    overflow: hidden;
 }
 
-
-.hero::before{
-content: '';
-position:absolute;
-top:0;
-left: 0;
-width: 100;
-height: 100;
-background-color: rgba(0, 0, 0, 0.4);
+.hero::before, #home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    z-index: 0;
+    border-radius: 24px;
 }
-
-
 
 .hero-content{
+    position: relative;
     z-index: 1;
     max-width: 800px;
     
@@ -130,34 +140,50 @@ background-color: rgba(0, 0, 0, 0.4);
     font-size: 3.rem;
     margin-bottom: 20px;
     font-weight: 700;
+    color: #FFD700;
 }
 .hero-content p{
     font-size: 1.3rem;
     margin-bottom: 40px;
-    color: #00695c;
+    color: #ffff;
 }
-.btn{
+.btn {
     display: inline-block;
     background-color: #ffb300;
     color: #004d40;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition:background-color 0.3s ease;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.btn:hover{
+.btn:hover,
+.btn:focus {
     background-color: #ffc107;
-
+    color: #00332e;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #004d40;
     color: #fff;
 }
 
-
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #00695c;
+    color: #fff;
+}
+
+.btn-lg {
+    font-size: 1.3em;
+    padding: 18px 40px;
+    border-radius: 12px;
 }
 /*section Headings*/
 
@@ -176,14 +202,19 @@ h2{
     gap: 30px;
 }
 
-.destination-card{
-    background-color: #fff;
+.destination-card {
+    background: rgba(255, 235, 59, 0.18); /* yellow glass effect */
+    box-shadow: 0 8px 32px 0 rgba(255, 193, 7, 0.10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 235, 59, 0.25); /* yellow border */
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: 
+        transform 0.3s ease,
+        background 0.3s,
+        box-shadow 0.3s;
     text-align: center;
-
 }
 
 .destination-card:hover{
@@ -232,33 +263,54 @@ h2{
 }
 
 /*experiences section*/
-
-.exprience-grid{
+.experience-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 30px;
     text-align: center;
+    margin-top: 30px;
 }
 
-.exprience-item{
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+.experience-item {
+    background: rgba(255, 255, 255, 0.18); /* always glass effect */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 30px 20px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 
+        box-shadow 0.3s,
+        background 0.3s,
+        transform 0.3s,
+        border-color 0.3s;
+    position: relative;
+    cursor: pointer;
 }
 
-.exprience-item i{
+.experience-item:hover,
+.experience-item:focus-within {
+    background: rgba(255, 235, 59, 0.25); /* yellow glass on hover */
+    box-shadow: 0 12px 32px 0 rgba(255, 193, 7, 0.18);
+    transform: translateY(-8px) scale(1.03);
+    border-color: #ffeb3b;
+}
+
+.experience-item:hover h3,
+.experience-item:focus-within h3 {
     color: #ffb300;
-    margin-bottom: 20px;
-}
-.exprience-item h3{
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: #004d40;
+    transition: color 0.3s;
 }
 
-.exprience-item p{
-    color: #555;
+.experience-item:hover i,
+.experience-item:focus-within i {
+    color: #ffb300;
+    transition: color 0.3s;
 }
 
 /*plan your trip form*/
@@ -335,6 +387,27 @@ footer{
     font-size:0.9em;
 }
 
+/* Success and danger alert styles */
+#form-alert {
+  margin-bottom: 16px;
+}
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #c3e6cb;
+}
+.alert-danger {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+}
+
 /*responsive Design*/
 @media(max-width:768px){
     .nav-links{
@@ -372,7 +445,7 @@ footer{
     .hero-content p{
         font-size: 1.1em;
     }
-    .destination-grid .exprience-grid{
+    .destination-grid .experience-grid{
         grid-template-columns: 1fr;
     }
     
