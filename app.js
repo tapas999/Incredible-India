@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const numTravelers = document.getElementById('num-travelers').value;
 
             if (travelDates && numTravelers) {
-                alert(`Trip Plan Request:\nDestination: ${destinationSelect || 'Any'}\nDates: ${travelDates}\nTravelers: ${numTravelers}\n\nThank you for your interest! We'll get back to you.`);
+                alert(`Trip Plan Request:\nDestination: ${destinationSelect || 'Any'}\nDates: ${travelDates}\nTravelers: ${numTravelers}\n\nThank you for your interest! We'll get back to you. `,'success');
                 tripForm.reset();
             } else {
                 alert('Please fill in travel dates and number of travelers.');
