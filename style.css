@@ -100,7 +100,7 @@ header .container{
 /*hero section*/
 .hero, #home {
     background:
-        url('ChatGPT Image Jul 5, 2025, 11_24_36 PM.png') no-repeat center center/cover;
+        url('bg.png') no-repeat center center/cover;
     height: 600px;
     display: flex;
     justify-content: center;
