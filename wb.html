@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agra Tourism</title>
+ <link rel="stylesheet" href="wb.css">
+ 
+</head>
+<body>
+
+  <header>
+   <div class="container"><h1>  Welcome to Bengal</h1>
+    
+    <nav> 
+          <ul class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#cuisine">Cuisine</a>
+    <a href="#markets">Markets</a>
+    </ul>
+  </nav>
+</div>
+</header>
+  <section id="about">
+    <h2>About Agra</h2>
+    <p>Agra, located on the banks of the Yamuna River in Uttar Pradesh, is famous worldwide for the Taj Mahal, a symbol of love and one of the Seven Wonders of the World.</p>
+  </section>
+
+  <section id="destinations">
+    <h2>Best Destinations</h2>
+    <ul>
+      <li>Taj Mahal</li>
+      <li>Agra Fort</li>
+      <li>Fatehpur Sikri</li>
+      <li>Mehtab Bagh</li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleMore('dest-more')">Show More</button>
+    <div id="dest-more" class="hidden">
+      <p>Also explore Akbar's Tomb, Jama Masjid, and the serene gardens around the city!</p>
+    </div>
+  </section>
+
+  <section id="cuisine">
+    <h2>Famous Cuisine</h2>
+    <ul>
+      <li>Agra Petha</li>
+      <li>Bedai and Jalebi</li>
+      <li>Dalmoth</li>
+      <li>Stuffed Parathas</li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleMore('food-more')">Show More</button>
+    <div id="food-more" class="hidden">
+      <p>Don’t miss chaat from Sadar Bazaar and Mughlai delicacies like kebabs and biryani!</p>
+    </div>
+  </section>
+
+  <section id="markets">
+    <h2>Popular Markets</h2>
+    <ul>
+      <li>Sadar Bazaar</li>
+      <li>Kinari Bazaar</li>
+      <li>Subhash Bazaar</li>
+      <li>Raja Ki Mandi</li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleMore('market-more')">Show More</button>
+    <div id="market-more" class="hidden">
+      <p>Perfect for handicrafts, leather shoes, sarees, and souvenirs.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Agra Tourism | Designed by Tapas</p>
+  </footer>
+
+  <script>
+    function toggleMore(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
