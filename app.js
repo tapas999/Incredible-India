@@ -29,15 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // simple "read more" functionality for destination cards
-    const readMoreButtons = document.querySelectorAll('.read-more-btn');
-    readMoreButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const destination = event.target.dataset.destination;
-            alert(`You clicked Read More for: ${destination.charAt(0).toUpperCase() + destination.slice(1)}. In a real website, this would navigate to a detailed page or show a Modal.`);
-            // In a real application, you'd load more details or navigate to a new page here.
-            // Example: window.location.href = `destination/${destination}.html`;
-        });
-    });
+    // const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    // readMoreButtons.forEach(button => {
+    //     button.addEventListener('click', (event) => {
+    //         const destination = event.target.dataset.destination;
+    //         alert(`You clicked Read More for: ${destination.charAt(0).toUpperCase() + destination.slice(1)}. In a real website, this would navigate to a detailed page or show a Modal.`);
+    //         // In a real application, you'd load more details or navigate to a new page here.
+    //         // Example: window.location.href = `destination/${destination}.html`;
+    //     });
+    // });
 
     // basic form submission alert
     const tripForm = document.querySelector('.trip-form');
